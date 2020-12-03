@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { format } = require('path');
 
 const input = fs.readFileSync('./input/day2.txt', 'utf8').split(/\n|\r\n|\r/).slice(0, -1);
 
