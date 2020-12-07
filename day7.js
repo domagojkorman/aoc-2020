@@ -3,7 +3,6 @@ const fs = require('fs');
 const input = fs.readFileSync('./input/day7.txt', 'utf8').split(/\n|\r\n|\r/).slice(0, -1);
 
 function count(bags, color) {
-  console.log(color)
   const b = bags.find(b => b.color === color)
   if (!b.bags.length) {
     return 0;
