@@ -15,17 +15,17 @@ const result2 = input.reduce((acc, current, index) => {
   const i1 = input[index + 1] || 0;
   const i2 = input[index + 2] || 0;
   const i3 = input[index + 3] || 0;
-  const diff1 = Math.abs(current - (i1 || 0));
-  const diff2 = Math.abs(current - (i2 || 0));
-  const diff3 = Math.abs(current - (i3 || 0));
+  const diff1 = Math.abs(current - i1);
+  const diff2 = Math.abs(current - i2);
+  const diff3 = Math.abs(current - i3);
 
-  if (diff1 && diff1 <= 3) {
+  if (i1 && diff1 <= 3) {
     acc[i1] = (acc[i1] || 0) + currentCount;
   }
-  if (diff2 && diff2 <= 3) {
+  if (i2 && diff2 <= 3) {
     acc[i2] = (acc[i2] || 0) + currentCount;
   }
-  if (diff3 && diff3 <= 3) {
+  if (i3 && diff3 <= 3) {
     acc[i3] = (acc[i3] || 0) + currentCount;
   }
   if (index !== input.length - 1) {
