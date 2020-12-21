@@ -1,4 +1,3 @@
-const { POINT_CONVERSION_COMPRESSED } = require('constants');
 const fs = require('fs');
 
 const input = fs.readFileSync('./input/day20.txt', 'utf8')
