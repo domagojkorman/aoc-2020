@@ -47,19 +47,6 @@ function pairFoodWithAllergen(food, contained) {
 }
 
 const pairedFood = pairFoodWithAllergen({}, contained);
-const foodWithoutAllergens = [];
-
-for (let allergen in allergensByFood) {
-  allergensByFood[allergen].forEach((foodList) => {
-    let allergenSet = new Set();
-    foodList.forEach((item) => {
-      if (!Object.keys(pairedFood).includes(item)) {
-        allergenSet.add(item);
-      }
-    })
-    foodWithoutAllergens.push(...allergenSet);
-  })
-}
 
 const result = input.reduce((acc, current) => {
   const food = current.slice(0, -1).split(' (contains ')[0].split(' ');
